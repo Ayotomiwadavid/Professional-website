@@ -1,241 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact Us - Apex Solutions</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-     <!-- Navigation  -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation  -->
     <nav class="navbar" id="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Apex Solutions</a>
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu" id="navMenu">
-                <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="about.html" class="nav-link">About</a></li>
-                <li><a href="services.html" class="nav-link">Services</a></li>
-                <li><a href="contact.html" class="nav-link active">Contact</a></li>
-            </ul>
-        </div>
+      <div class="container nav-container">
+        <a href="index.html" class="logo">
+          <img
+            src="https://res.cloudinary.com/djdvsrjzs/image/upload/v1759535723/230135793_ocx17x.png"
+            alt="logo"
+            class="logo-image"
+          />
+        </a>
+        <button
+          class="mobile-menu-toggle"
+          id="mobileMenuToggle"
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="about.html" class="nav-link">About</a></li>
+          <li><a href="services.html" class="nav-link">Services</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </div>
     </nav>
 
-     <!-- Page Header  -->
+    <!-- Page Header  -->
     <section class="page-header">
-        <div class="container">
-            <h1 class="page-title fade-in">Get in Touch</h1>
-            <p class="page-subtitle fade-in-delay">Let's discuss how we can help your business succeed</p>
-        </div>
+      <div class="container">
+        <h1 class="page-title fade-in">Get in Touch</h1>
+        <p class="page-subtitle fade-in-delay">
+          Let's discuss how we can help your business succeed
+        </p>
+      </div>
     </section>
 
-     <!-- Contact Section  -->
+    <!-- Contact Section  -->
     <section class="section">
-        <div class="container">
-            <div class="contact-grid">
-                 <!-- Contact Form  -->
-                <div class="contact-form-container fade-in-scroll">
-                    <h2 class="section-title">Send us a message</h2>
-                    <p class="text-large">Fill out the form below and we'll get back to you within 24 hours.</p>
-                    
-                    <form id="contactForm" class="contact-form" novalidate>
-                        <div class="form-group">
-                            <label for="name" class="form-label">Full Name *</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form-input" 
-                                required
-                                aria-required="true"
-                            >
-                            <span class="form-error" id="nameError"></span>
-                        </div>
+      <div class="container">
+        <div class="contact-grid">
+          <!-- Contact Form  -->
+          <div class="contact-form-container fade-in-scroll">
+            <h2 class="section-title">Send us a message</h2>
+            <p class="text-large">
+              Fill out the form below and we'll get back to you within 24 hours.
+            </p>
 
-                        <div class="form-group">
-                            <label for="email" class="form-label">Email Address *</label>
-                            <input 
-                                type="email" 
-                                id="email" 
-                                name="email" 
-                                class="form-input" 
-                                required
-                                aria-required="true"
-                            >
-                            <span class="form-error" id="emailError"></span>
-                        </div>
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name *</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-input"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" id="nameError"></span>
+              </div>
 
-                        <div class="form-group">
-                            <label for="phone" class="form-label">Phone Number</label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                class="form-input"
-                            >
-                            <span class="form-error" id="phoneError"></span>
-                        </div>
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address *</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-input"
+                  required
+                  aria-required="true"
+                />
+                <span class="form-error" id="emailError"></span>
+              </div>
 
-                        <div class="form-group">
-                            <label for="company" class="form-label">Company Name</label>
-                            <input 
-                                type="text" 
-                                id="company" 
-                                name="company" 
-                                class="form-input"
-                            >
-                        </div>
+              <div class="form-group">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="form-input" />
+                <span class="form-error" id="phoneError"></span>
+              </div>
 
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject *</label>
-                            <select 
-                                id="subject" 
-                                name="subject" 
-                                class="form-input" 
-                                required
-                                aria-required="true"
-                            >
-                                <option value="">Select a subject</option>
-                                <option value="general">General Inquiry</option>
-                                <option value="consulting">Consulting Services</option>
-                                <option value="partnership">Partnership Opportunities</option>
-                                <option value="support">Support</option>
-                                <option value="other">Other</option>
-                            </select>
-                            <span class="form-error" id="subjectError"></span>
-                        </div>
+              <div class="form-group">
+                <label for="company" class="form-label">Company Name</label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  class="form-input"
+                />
+              </div>
 
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message *</label>
-                            <textarea 
-                                id="message" 
-                                name="message" 
-                                class="form-input form-textarea" 
-                                rows="6" 
-                                required
-                                aria-required="true"
-                            ></textarea>
-                            <span class="form-error" id="messageError"></span>
-                        </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject *</label>
+                <select
+                  id="subject"
+                  name="subject"
+                  class="form-input"
+                  required
+                  aria-required="true"
+                >
+                  <option value="">Select a subject</option>
+                  <option value="general">General Inquiry</option>
+                  <option value="consulting">Consulting Services</option>
+                  <option value="partnership">Partnership Opportunities</option>
+                  <option value="support">Support</option>
+                  <option value="other">Other</option>
+                </select>
+                <span class="form-error" id="subjectError"></span>
+              </div>
 
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                        
-                        <div id="formSuccess" class="form-success" style="display: none;">
-                            <p>Thank you for your message! We'll get back to you soon.</p>
-                        </div>
-                    </form>
-                </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message *</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  class="form-input form-textarea"
+                  rows="6"
+                  required
+                  aria-required="true"
+                ></textarea>
+                <span class="form-error" id="messageError"></span>
+              </div>
 
-                 <!-- Contact Information  -->
-                <div class="contact-info-container fade-in-scroll">
-                    <h2 class="section-title">Contact Information</h2>
-                    
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-                                <circle cx="12" cy="10" r="3"/>
-                            </svg>
-                        </div>
-                        <div class="contact-info-content">
-                            <h3 class="contact-info-title">Office Address</h3>
-                            <p>123 Business Avenue, Suite 100<br>New York, NY 10001<br>United States</p>
-                        </div>
-                    </div>
+              <button type="submit" class="btn btn-primary btn-full">
+                Send Message
+              </button>
 
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-                            </svg>
-                        </div>
-                        <div class="contact-info-content">
-                            <h3 class="contact-info-title">Phone</h3>
-                            <p>+1 (555) 123-4567<br>Mon-Fri, 9:00 AM - 6:00 PM EST</p>
-                        </div>
-                    </div>
+              <div id="formSuccess" class="form-success" style="display: none">
+                <p>Thank you for your message! We'll get back to you soon.</p>
+              </div>
+            </form>
+          </div>
 
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                                <polyline points="22,6 12,13 2,6"/>
-                            </svg>
-                        </div>
-                        <div class="contact-info-content">
-                            <h3 class="contact-info-title">Email</h3>
-                            <p>info@apexsolutions.com<br>support@apexsolutions.com</p>
-                        </div>
-                    </div>
+          <!-- Contact Information  -->
+          <div class="contact-info-container fade-in-scroll">
+            <h2 class="section-title">Contact Information</h2>
 
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <circle cx="12" cy="12" r="10"/>
-                                <path d="M12 6v6l4 2"/>
-                            </svg>
-                        </div>
-                        <div class="contact-info-content">
-                            <h3 class="contact-info-title">Business Hours</h3>
-                            <p>Monday - Friday: 9:00 AM - 6:00 PM<br>Saturday - Sunday: Closed</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <h3 class="contact-info-title">Office Address</h3>
+                <p>
+                  123 Business Avenue, Suite 100<br />New York, NY 10001<br />United
+                  States
+                </p>
+              </div>
             </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+                  />
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <h3 class="contact-info-title">Phone</h3>
+                <p>+1 (555) 123-4567<br />Mon-Fri, 9:00 AM - 6:00 PM EST</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                  />
+                  <polyline points="22,6 12,13 2,6" />
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <h3 class="contact-info-title">Email</h3>
+                <p>info@apexsolutions.com<br />support@apexsolutions.com</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 6v6l4 2" />
+                </svg>
+              </div>
+              <div class="contact-info-content">
+                <h3 class="contact-info-title">Business Hours</h3>
+                <p>
+                  Monday - Friday: 9:00 AM - 6:00 PM<br />Saturday - Sunday:
+                  Closed
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-     <!-- Map Section  -->
+    <!-- Map Section  -->
     <section class="section section-dark">
-        <div class="container">
-            <h2 class="section-title centered">Visit Our Office</h2>
-            <div class="map-container fade-in-scroll">
-                <div class="map-placeholder">
-                    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&h=600&fit=crop" alt="Commercial district aerial view">
-                    <div class="map-overlay">
-                        <p>123 Business Avenue, Suite 100, New York, NY 10001</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title centered">Visit Our Office</h2>
+        <div class="map-container fade-in-scroll">
+          <div class="map-placeholder">
+            <img
+              src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1200&h=600&fit=crop"
+              alt="Commercial district aerial view"
+            />
+            <div class="map-overlay">
+              <p>123 Business Avenue, Suite 100, New York, NY 10001</p>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
-     <!-- Footer  -->
+    <!-- Footer  -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-column">
-                    <h3 class="footer-logo">Apex Solutions</h3>
-                    <p class="footer-description">Professional business consulting services for sustainable growth and innovation.</p>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Navigation</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4 class="footer-title">Contact</h4>
-                    <ul class="footer-links">
-                        <li>Email: info@apexsolutions.com</li>
-                        <li>Phone: +1 (555) 123-4567</li>
-                        <li>Address: 123 Business Ave, Suite 100</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Apex Solutions. All rights reserved.</p>
-            </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-column">
+            <h3 class="footer-logo">Apex Solutions</h3>
+            <p class="footer-description">
+              Professional business consulting services for sustainable growth
+              and innovation.
+            </p>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Navigation</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h4 class="footer-title">Contact</h4>
+            <ul class="footer-links">
+              <li>Email: info@apexsolutions.com</li>
+              <li>Phone: +1 (555) 123-4567</li>
+              <li>Address: 123 Business Ave, Suite 100</li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Apex Solutions. All rights reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
