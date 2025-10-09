@@ -269,11 +269,35 @@ navLinks.forEach((link) => {
 })
 
 // ===================================
+// Cookie Consent
+// ===================================
+
+const cookieConsent = document.getElementById("cookieConsent")
+const acceptCookiesBtn = document.getElementById("acceptCookies")
+
+// Check if user has already accepted cookies
+const hasAcceptedCookies = localStorage.getItem("cookiesAccepted")
+
+if (!hasAcceptedCookies) {
+  // Show cookie consent popup
+  cookieConsent.classList.add("show")
+}
+
+if (acceptCookiesBtn) {
+  acceptCookiesBtn.addEventListener("click", () => {
+    // Save acceptance to localStorage
+    localStorage.setItem("cookiesAccepted", "true")
+    // Hide the popup
+    cookieConsent.classList.remove("show")
+  })
+}
+
+// ===================================
 // Initialize on Page Load
 // ===================================
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Apex Solutions website loaded successfully!")
+  console.log("Lease Legal website loaded successfully!")
 
   // Add a small delay to ensure smooth initial animations
   setTimeout(() => {
