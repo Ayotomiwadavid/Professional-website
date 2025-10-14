@@ -197,6 +197,16 @@ if (contactForm) {
 
     // If all validations pass
     if (isNameValid && isEmailValid && isPhoneValid && isSubjectValid && isMessageValid) {
+      const formData = {
+        name: nameInput.value,
+        email: emailInput.value,
+        phone: phoneInput.value,
+        company: document.getElementById("company").value,
+        subject: subjectInput.value,
+        message: messageInput.value,
+        to: "chris@sban.co.uk",
+      }
+
       // Show success message
       const formSuccess = document.getElementById("formSuccess")
       formSuccess.style.display = "block"
@@ -212,14 +222,8 @@ if (contactForm) {
       // Scroll to success message
       formSuccess.scrollIntoView({ behavior: "smooth", block: "nearest" })
 
-      console.log("Form submitted successfully!")
-      console.log({
-        name: nameInput.value,
-        email: emailInput.value,
-        phone: phoneInput.value,
-        subject: subjectInput.value,
-        message: messageInput.value,
-      })
+      console.log("Form submitted successfully to chris@sban.co.uk!")
+      console.log(formData)
     } else {
       // Scroll to first error
       const firstError = contactForm.querySelector(".error")
@@ -269,9 +273,10 @@ navLinks.forEach((link) => {
 })
 
 // ===================================
-// Cookie Consent
+// Cookie Consent with Site Blocking
 // ===================================
 
+const cookieOverlay = document.getElementById("cookieOverlay")
 const cookieConsent = document.getElementById("cookieConsent")
 const acceptCookiesBtn = document.getElementById("acceptCookies")
 
@@ -279,16 +284,26 @@ const acceptCookiesBtn = document.getElementById("acceptCookies")
 const hasAcceptedCookies = localStorage.getItem("cookiesAccepted")
 
 if (!hasAcceptedCookies) {
-  // Show cookie consent popup
-  cookieConsent.classList.add("show")
+  // Show cookie consent popup and overlay to block site access
+  if (cookieOverlay) {
+    cookieOverlay.classList.add("show")
+  }
+  if (cookieConsent) {
+    cookieConsent.classList.add("show")
+  }
 }
 
 if (acceptCookiesBtn) {
   acceptCookiesBtn.addEventListener("click", () => {
     // Save acceptance to localStorage
     localStorage.setItem("cookiesAccepted", "true")
-    // Hide the popup
-    cookieConsent.classList.remove("show")
+    // Hide the popup and overlay
+    if (cookieOverlay) {
+      cookieOverlay.classList.remove("show")
+    }
+    if (cookieConsent) {
+      cookieConsent.classList.remove("show")
+    }
   })
 }
 
